@@ -23,7 +23,7 @@ const Landing = () => {
       
     `,
     title: `
-      text-4xl
+      text-5xl
       md:text-6xl
     `,
     textArea: `
@@ -37,6 +37,10 @@ const Landing = () => {
       lg:w-1/2
       lg:items-start
       lg:justify-center
+    `,
+    linkList: `
+      text-3xl
+      lg:text-2md
     `,
     link: `
       hover:underline
@@ -56,15 +60,36 @@ const Landing = () => {
       </div>
       <div className={styles.textArea}>
         <h1 className={styles.title}>Juan Diego Rojas Aguilar</h1>
-        <ul >
+        <ul className={styles.linkList}>
           <li>
-            <a className={styles.link}>LinkedIn</a>
+            <a 
+              className={styles.link}
+              href="https://www.linkedin.com/in/juandrojasa/"
+              target="_blank"
+              rel="nofollow"
+            >
+              LinkedIn
+            </a>
           </li>
           <li>
-            <a className={styles.link}>Gitub</a>
+            <a 
+              className={styles.link}
+              href="https://github.com/JuanRojasAguilar"
+              target="_blank"
+              rel="nofollow"
+            >
+              Gitub
+            </a>
           </li>
           <li>
-            <a className={styles.link}>E-mail</a>
+            <a 
+              className={styles.link}
+              href="mailto:yo217@hotmail.es"
+              target="_blank"
+              rel="nofollow"
+            >
+              E-mail
+            </a>
           </li>
         </ul>
       </div>
