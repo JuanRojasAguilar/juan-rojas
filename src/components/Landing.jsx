@@ -78,7 +78,7 @@ const Landing = () => {
               target="_blank"
               rel="nofollow"
             >
-              Gitub
+              Github
             </a>
           </li>
           <li>
@@ -89,6 +89,15 @@ const Landing = () => {
               rel="nofollow"
             >
               E-mail
+            </a>
+          </li>
+          <li>
+            <a 
+              className={styles.link}
+              href="/juan_rojas_cv.pdf"
+              download
+            >
+              Download my CV!
             </a>
           </li>
         </ul>
