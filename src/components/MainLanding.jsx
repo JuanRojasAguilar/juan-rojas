@@ -30,7 +30,7 @@ const MainLanding = () => {
         solutions?
       </h1>
       <div className="h-3/5 sm:h-full flex flex-col justify-around sm:justify-center sm:w-1/2">
-        <p className="ml-2 text-6xl sm:text-7xl w-max sm:self-center sm:pb-12">
+        <p className="ml-2 text-4xl sm:text-7xl w-max sm:self-center sm:pb-12">
           Juan Rojas
           <br />
           Software Engineer
