@@ -13,10 +13,10 @@ const Styles = {
   container: `
     w-full
     h-full
-    bg-everforest-green
+    bg-everforest-yellow
     text-everforest-back-500
-    font-semibold
-    p-4
+    font-semibold sm:font-bold
+    p-12
   `,
   cardFooter: `
     justify-between
@@ -50,8 +50,8 @@ const projects = [
 const About = () => {
   return (
     <div className={Styles.container} id="about">
-      <h1 className="text-4xl mb-8">
-        Welcome,
+      <h1 className="text-4xl sm:text-7xl mb-8">
+        <span className="text-everforest-red">Welcome,</span>
         <br /> I'm a fullstack programmer with an open mind about how code
         should be written.
       </h1>
@@ -66,11 +66,10 @@ const About = () => {
         }}
       >
         {projects.map(({ key, title, projectImage, alt, projectSrc }) => (
-          <Tab key={key} title={title}>
-            <Card isFooterBlurred radius="lg" className="border-none w-full">
+          <Tab key={key} title={title} className="sm:flex">
+            <Card isFooterBlurred radius="lg" className="border-none w-full sm:w-max">
               <Image
-                height={240}
-                className="w-full"
+                className="w-full h-[240px] sm:h-[400px]"
                 alt={alt}
                 src={projectImage}
               />
@@ -89,6 +88,9 @@ const About = () => {
                 </CardFooter>
               </a>
             </Card>
+            <div className="hidden sm:inline w-1/3">
+              <h1 className="text-8xl pl-20 text-wrap text-everforest-red">{alt}</h1>
+            </div>
           </Tab>
         ))}
       </Tabs>

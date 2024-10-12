@@ -5,17 +5,18 @@ import { Button } from "@nextui-org/button";
 const Styles = {
   container: `
     flex 
-    flex-col 
+    flex-col
+    sm:flex-row
     h-full w-full 
     justify-center 
-    bg-gradient-to-b 
-    from-everforest-back-200 from-70% 
-    to-everforest-green 
+    bg-everforest-back-200
     text-everforest-front
   `,
   button: `
-    text-2xl text-inherit 
-    hover:bg-everforest-back-50
+    text-2xl text-inherit
+    sm:text-6xl
+    sm:h-[80px]
+    hover:bg-everforest-back-400
     border-everforest-front
   `
 }
@@ -23,13 +24,13 @@ const Styles = {
 const MainLanding = () => {
   return (
     <div className={Styles.container}>
-      <h1 className="text-6xl h-1/2 content-end pl-2">
+      <h1 className="text-6xl sm:text-9xl sm:font-bold h-2/5 sm:h-full content-end sm:content-center pl-2 sm:pl-20 sm:w-1/2">
         Are you ready to find{" "}
         <span className="text-everforest-red font-bold">creative</span>{" "}
         solutions?
       </h1>
-      <div className="h-1/2 flex flex-col justify-around">
-        <p className="ml-2 text-3xl w-max">
+      <div className="h-3/5 sm:h-full flex flex-col justify-around sm:justify-center sm:w-1/2">
+        <p className="ml-2 text-6xl sm:text-7xl w-max sm:self-center sm:pb-12">
           Juan Rojas
           <br />
           Software Engineer
