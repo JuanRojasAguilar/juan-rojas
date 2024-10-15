@@ -89,7 +89,7 @@ const About = () => {
               </a>
             </Card>
             <div className="hidden sm:inline w-1/3">
-              <h1 className="text-7xl pl-20 text-wrap text-everforest-red">{alt}</h1>
+              <h1 className="text-7xl pl-20 text-pretty text-everforest-red">{alt}</h1>
             </div>
           </Tab>
         ))}
