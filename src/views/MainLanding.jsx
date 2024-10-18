@@ -24,13 +24,13 @@ const Styles = {
 const MainLanding = () => {
   return (
     <div className={Styles.container}>
-      <h1 className="text-6xl sm:text-9xl sm:font-bold h-2/5 sm:h-full content-end sm:content-center pl-2 sm:pl-20 sm:w-1/2">
+      <h1 className="text-6xl sm:text-9xl sm:font-bold h-2/5 sm:h-full content-end sm:content-center pl-8 sm:pl-20 sm:w-1/2">
         Are you ready to find{" "}
         <span className="text-everforest-red font-bold">creative</span>{" "}
         solutions?
       </h1>
       <div className="h-3/5 sm:h-full flex flex-col justify-around sm:justify-center sm:w-1/2">
-        <p className="ml-2 text-4xl sm:text-7xl w-max sm:self-center sm:pb-12">
+        <p className="pl-8 text-4xl sm:text-7xl w-max sm:self-center sm:pb-12">
           Juan Rojas
           <br />
           Software Engineer

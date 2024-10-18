@@ -1,11 +1,11 @@
-import MainLanding from "./components/MainLanding.jsx";
-import About from "./components/About.jsx";
-import Objective from "./components/Objective.jsx"
+import MainLanding from "./views/MainLanding.jsx";
+import About from "./views/About.jsx";
+import Objective from "./views/Objective.jsx"
 
 function App() {
 
   return (
-    <div className="w-screen h-screen">
+    <div className="w-screen sm:w-fit h-screen">
       <MainLanding />
       <About />
       <Objective />
@@ -13,4 +13,5 @@ function App() {
   )
 }
 
-export default App
+export default App;
+

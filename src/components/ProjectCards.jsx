@@ -1,33 +1,7 @@
-"use client";
-
-import { Tabs, Tab } from "@nextui-org/tabs";
-import { Card, CardFooter } from "@nextui-org/card";
-import { Image } from "@nextui-org/image";
-import { Button } from "@nextui-org/button";
+import { Tabs, Tab, Card, Image, CardFooter, Button } from "@nextui-org/react"
 import GitHubIcon from "@mui/icons-material/GitHub";
-
 import JavaImage from "../assets/javaproject.png";
 import PythonImage from "../assets/pythonproject.png";
-
-const Styles = {
-  container: `
-    w-full
-    h-full
-    bg-everforest-yellow
-    text-everforest-back-500
-    font-semibold sm:font-bold
-    p-12
-  `,
-  cardFooter: `
-    justify-between
-    before:bg-white/10 
-    border-white/20 border-1 
-    overflow-hidden py-1 absolute 
-    before:rounded-xl rounded-large 
-    bottom-1 w-[calc(100%_-_8px)] 
-    shadow-small ml-1 z-10
-  `
-};
 
 const projects = [
   {
@@ -47,14 +21,20 @@ const projects = [
   },
 ];
 
-const About = () => {
+const Styles = {
+  cardFooter: `
+    justify-between
+    before:bg-white/10 
+    border-white/20 border-1 
+    overflow-hidden py-1 absolute 
+    before:rounded-xl rounded-large 
+    bottom-1 w-[calc(100%_-_8px)] 
+    shadow-small ml-1 z-10
+  `
+}
+
+const ProjectCards = () => {
   return (
-    <div className={Styles.container} id="about">
-      <h1 className="text-4xl sm:text-7xl mb-8">
-        <span className="text-everforest-red">Welcome,</span>
-        <br /> I'm a fullstack programmer with an open mind about how code
-        should be written.
-      </h1>
       <Tabs
         aria-label="Options"
         size="lg"
@@ -94,8 +74,9 @@ const About = () => {
           </Tab>
         ))}
       </Tabs>
-    </div>
-  );
-};
 
-export default About;
+  );
+}
+
+export default ProjectCards;
+
