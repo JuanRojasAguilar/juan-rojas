@@ -1,7 +1,7 @@
 import { Suspense, useState } from "react";
 import { myProjects } from "../constants/index";
 import { Canvas } from "@react-three/fiber";
-import { Center, OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import { Center, OrbitControls } from "@react-three/drei";
 import CanvasLoader from "../components/CanvasLoader";
 import DemoComputer from "../components/DemoComputer";
 
@@ -23,7 +23,7 @@ const Projects = () => {
     });
   }
 	return (
-		<section className="c-space my-20">
+		<section className="c-space my-20" id="work">
 			<p className="head-text">My Work</p>
 			<div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
 				<div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
@@ -65,7 +65,7 @@ const Projects = () => {
 							rel="noreferrer"
 							className="flex items-center gap-2 cursor-pointer text-white-600"
 						>
-							<p className="">Check Live Site</p>
+							<p className="">Check It Out</p>
 							<img src="/assets/arrow-up.png" className="w-3 h-3" alt="arrow" />
 						</a>
 					</div>
