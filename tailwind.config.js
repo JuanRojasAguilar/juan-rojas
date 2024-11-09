@@ -31,6 +31,6 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-gradient-mask-image")],
 }
 

@@ -21,6 +21,7 @@
     "react-dom": "^18.3.1",
     "react-globe.gl": "^2.27.4",
     "react-responsive": "^10.0.0",
+    "tailwind-gradient-mask-image": "^1.2.0",
     "three": "^0.170.0"
   },
   "devDependencies": {
