@@ -89,9 +89,9 @@ const About = () => {
 				<div className="xl:col-span-2 xl:row-span-3">
 					<div className="grid-container">
 						<img
-							src="/assets/grid3.png"
+							src="/assets/city.svg"
 							alt="grid-3"
-							className="w-full sm:h-[266px] h-fit object-contain"
+							className="w-full sm:h-[266px] h-fit object-contain animate-pulse"
 						/>
 						<div>
 							<p className="grid-headtext">The Drive To Code</p>

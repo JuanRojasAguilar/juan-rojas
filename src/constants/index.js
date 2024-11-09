@@ -277,7 +277,7 @@ export const workExperiences = [
 	{
 		id: 1,
 		name: "Shonny Stilos",
-		pos: "Systems Engineer",
+		pos: "Software Engineer",
 		duration: "2024",
 		title:
 			"As a systems engineer I was tasked to lead the first steps of a local hair saloon into the digital world setting up Instagram pages and contact, a simple Web App that uses Angular and Firebase that allows to manage customers and their respective training in using the platform.",
