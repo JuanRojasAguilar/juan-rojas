@@ -31,11 +31,11 @@ const About = () => {
 				</div>
 				<div className="col-span-1 xl:row-span-3">
 					<div className="grid-container">
-						<div className="overflow-hidden gradient-mask-b-0 h-[260px]">
+						<div className="overflow-hidden gradient-mask-b-0 h-[260px] brightness-110">
 							<img
 								src="/assets/architectural.jpg"
 								alt="grid-2"
-								className="w-full sm:h-[276px] h-fit object-contain gradient-mask-t-0"
+								className="w-full sm:h-[276px] h-fit object-contain gradient-mask-t-0 "
 							/>
 						</div>
 						<div>

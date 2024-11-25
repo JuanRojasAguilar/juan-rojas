@@ -1,14 +1,9 @@
-import { PerspectiveCamera } from "@react-three/drei"
+import { OrbitControls, PerspectiveCamera } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
 import { Suspense } from "react"
 import CanvasLoader from "../components/CanvasLoader"
 import { useMediaQuery } from "react-responsive"
-import { calculateSizes } from "../constants"
 import { HackerRoom } from "../components/HackerRoom"
-import ReactLogo from "../components/ReactLogo"
-import Cube from "../components/Cube"
-import Rings from "../components/Ring"
-import HeroCamera from "../components/HeroCamera"
 import Button from "../components/Button"
 
 const Hero = () => {
@@ -24,15 +19,11 @@ const Hero = () => {
     `
   }
 
-  const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 768 })
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
-
-  const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
   return (
     <section className={Styles.container} >
-      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
+      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3 z-10 select-none">
          <p className={Styles.greeting}>It&apos;s Great To see YOU here! I&apos;m Juan D. Rojas <span className="waving-hand">✌️</span></p>
          <p className="hero_tag text-gray_gradient">Building Products for Everyday Problems</p>
       </div>
@@ -40,21 +31,14 @@ const Hero = () => {
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 20]} />
-            <HeroCamera isMobile={isMobile}>
-              <HackerRoom
-                scale={sizes.deskScale}
-                position={sizes.deskPosition}
-                rotation={[0, -Math.PI, 0]}
-              />
-            </HeroCamera>
-            <group>
-              <ReactLogo position={sizes.reactLogoPosition}/>
-              <Cube position={sizes.cubePosition}/>
-              <Rings position={sizes.ringPosition}/>
-            </group>
+            <HackerRoom
+              scale={isMobile ? 0.4 : 0.6}
+              position={[0, 0, 0]}
+              rotation={[-Math.PI/3, -Math.PI, 0]}
+            />
             <ambientLight intensity={1} />
-            <directionalLight position={[10,10,10]} intensity={0.6}/>
-
+            <directionalLight position={[10, 10, -10]} intensity={1}/>
+            <OrbitControls enableDamping enablePan={false} enableZoom={false}/>
           </Suspense>
         </Canvas>
       </div>

@@ -1,26 +1,14 @@
-import { useEffect, useRef } from 'react'
-import { useGLTF, useVideoTexture } from '@react-three/drei'
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
+/* eslint-disable react/prop-types */
+import { useRef } from 'react'
+import { useGLTF, useTexture } from '@react-three/drei'
 
 const DemoComputer = (props) => {
   const group = useRef()
   const { nodes, materials } = useGLTF('/models/computer.glb');
-  const txt = useVideoTexture(props.texture ? props.texture : "/textures/project/project1.mp4");
+  // const txt = useVideoTexture(props.texture);
+  const txt = useTexture("/textures/project/javaproject.png");
+  txt.flipY = false;
 
-  useEffect(() => {
-    if (txt) {
-      txt.flipY = false;
-    }
-  }, [txt]);
-
-  useGSAP(() => {
-    gsap.from(group.current.rotation, {
-      y: Math.PI,
-      duration: 1.5,
-      ease: "power3.out"
-    });
-  }, [txt]);
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
